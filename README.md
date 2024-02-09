@@ -17,33 +17,37 @@ This repository contains the task that I completed while working as an intern fo
 _Please click on the images on right side to view my solution._
 
 User Interface:
--   Clean and intuitive interface for easy navigation. Responsive design to ensure a seamless experience across various devices.
+
+The interface is designed to be clean and intuitive, facilitating easy navigation. It is responsive, providing a seamless experience across different devices.
 
 Customer Data Management:
--   Implementation of a MongoDB database to store customer information.Basic customer details such as name, email, and current balance are captured.
+
+Utilization of a MongoDB database to effectively manage customer information. Basic details such as name, email, and current balance are stored securely.
 
 Dummy Data Creation:
--   Inclusion of functionality to generate and store dummy data for up to 10 customers in the MongoDB database.
+
+Functionality is included to generate and store dummy data for a maximum of 10 customers in the MongoDB database.
 
 Customers Table:
--   Display of a table showcasing customer information.
-    Fields include name, email, and current balance for each customer.
+
+A table is presented to display customer information, including their name, email, and current balance.
 
 Transfers Table:
--   Integration of a Transfers table to record and display all transactions.
-    Information logged includes transaction date, sender, recipient, and amount transferred.
+
+Integration of a Transfers table to log and exhibit all transactions. Key details recorded include the transaction date, sender, recipient, and transferred amount.
 
 Transaction Functionality:
--   User-friendly interface for initiating transactions between customers.
-    Validation checks to ensure sufficient balance before processing transfers.
+
+The system offers a user-friendly interface for initiating transactions between customers. Validation checks are in place to ensure that there are sufficient funds before processing transfers.
 
 Balance Update:
--   Real-time updating of customer balances after each successful transaction.
-    Display of updated balances in the Customers table.
+
+Customer balances are updated in real-time following each successful transaction. These updated balances are reflected in the Customers table.
 
 Security Measures:
--   Implementation of secure coding practices to protect against common web vulnerabilities.
-    Proper authentication and authorization mechanisms to ensure data integrity.
+
+Adherence to secure coding practices to mitigate common web vulnerabilities. Robust authentication and authorization mechanisms are implemented to maintain data integrity.
 
 Scalability:
--   Design considerations for scalability, ensuring the website can accommodate additional customers and transactions in the future.
+
+The design accounts for scalability, enabling the website to handle additional customers and transactions seamlessly in the future.
