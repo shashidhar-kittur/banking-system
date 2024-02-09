@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Customers</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #333;
+      margin-top: 50px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>All Customers</h1>
+    <ul>
+      <% customers.forEach(function(customer) { %>
+        <li>
+          <a href="/customer/<%= customer._id %>"><%= customer.name %></a>
+          - Balance: <%= customer.currentBalance %>
+        </li>
+      <% }); %>
+    </ul>
+
+    <h2>Transfer Money</h2>
+    <p>Select a customer to initiate a money transfer:</p>
+    <ul>
+      <% customers.forEach(function(customer) { %>
+        <li><a href="/transfer/<%= customer._id %>">Transfer Money from <%= customer.name %></a></li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>

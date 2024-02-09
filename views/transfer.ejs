@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer Money</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-top: 50px;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Transfer Money</h1>
+    <form action="/transfer/<%= senderId %>" method="post">
+      <label for="amount">Amount:</label>
+      <input type="number" name="amount" id="amount" required>
+      
+      <label for="receiver">Select Recipient:</label>
+      <select name="receiver" id="receiver" required>
+        <% customers.forEach(function(customer) { %>
+          <% if (customer._id.toString() !== senderId.toString()) { %>
+            <option value="<%= customer._id %>"><%= customer.name %></option>
+          <% } %>
+        <% }); %>
+      </select>
+
+      <button type="submit">Transfer</button>
+    </form>
+    <p><a href="/customers">Back to All Customers</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= customer.name %> Details</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #333;
+      margin-top: 50px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><%= customer.name %> Details</h1>
+    <p>Email: <%= customer.email %></p>
+    <p>Current Balance: <%= customer.currentBalance %></p>
+
+    <h2>Transfer Money</h2>
+    <p><a href="/transfer/<%= customer._id %>">Transfer Money to Another Customer</a></p>
+
+    <p><a href="/customers">Back to All Customers</a></p>
+  </div>
+</body>
+</html>
