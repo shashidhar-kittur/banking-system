@@ -1,53 +1,87 @@
-<img align = right height = 120 width = 120 src = https://www.thesparksfoundationsingapore.org/images/logo_small.png>
+# Basic Banking System
 
-#  The Sparks Foundation Task
+## Overview
+This is a simple banking system that allows users to view customer details, transfer money, and track transactions. The project is built using Node.js, Express, MongoDB, and EJS for templating.
 
+## Features
+- **User Interface:** Responsive and intuitive UI for easy navigation.
+- **Customer Data Management:** Uses MongoDB to store customer information securely.
+- **Dummy Data Generation:** Generates up to 10 dummy customers.
+- **Customers Table:** Displays customer details including name, email, and balance.
+- **Transfers Table:** Logs transactions with details like date, sender, recipient, and amount.
+- **Transaction Functionality:** Ensures users can transfer money with balance validation.
+- **Balance Update:** Updates customer balances in real-time.
+- **Security Measures:** Implements authentication and secure coding practices.
+- **Scalability:** Designed to handle growing users and transactions.
 
-This repository contains the task that I completed while working as an intern for [The Sparks Foundation.](https://www.thesparksfoundationsingapore.org/)
-- **Internship Category** - Web Development And Designing
-- **Internship Duration** - 1 Month ( January-2024 )
-- **Internship Type** - Work from Home
+## Tech Stack
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Frontend:** HTML, CSS, EJS, Bootstrap
 
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/basic-banking-system.git
+   cd basic-banking-system
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Set up environment variables (create a `.env` file):
+   ```env
+   MONGO_URI=your_mongodb_connection_string
+   PORT=3000
+   ```
+4. Run the server:
+   ```sh
+   npm start
+   ```
+5. Open `http://localhost:3000` in your browser.
 
-[<img align = right height = 50 width = 50 src = https://cdn4.iconfinder.com/data/icons/social-media-and-logos-11/32/Logo_Youtube-512.png>](https://www.youtube.com/watch?v=GYUokKXU-gs)
-[<img align = right height = 50 width = 50 src = https://cdn4.iconfinder.com/data/icons/project-management-4-2/65/161-512.png>](https://github.com/AnshKumar200/banking-system/blob/master/app.js)
+## Folder Structure
+```
+📦 basic-banking-system
+ ┣ 📂 public            # Static assets (CSS, images)
+ ┣ 📂 views             # EJS templates for frontend
+ ┣ 📂 routes            # Express routes (customers, transactions)
+ ┣ 📂 models            # Mongoose schemas
+ ┣ 📜 server.js         # Main server file
+ ┣ 📜 package.json      # Dependencies and scripts
+ ┣ 📜 .env              # Environment variables
+ ┗ 📜 README.md         # Project documentation
+```
 
+## API Endpoints
+| Method | Route            | Description                     |
+|--------|----------------|---------------------------------|
+| GET    | `/`            | Home Page                       |
+| GET    | `/customers`   | Display all customers           |
+| GET    | `/transfer`    | Transfer money UI               |
+| POST   | `/transfer`    | Process a transaction           |
+| GET    | `/transactions`| View transaction history        |
 
-## Basic Banking System
-_Please click on the images on right side to view my solution._
+## Design and UI
+The interface is designed with a modern, responsive look using Bootstrap and CSS. It includes:
+- A **home page** with an overview of the banking system.
+- A **customers page** displaying a list of all customers with their details.
+- A **transfer page** allowing users to select sender, receiver, and amount.
+- A **transactions page** showing a history of all completed transactions.
 
-User Interface:
+### Screenshots
+#### Home Page
+![Home Page](demo-images/home.png)
+#### Customers Table
+![Customers Table](demo-images/customers.png)
+#### Transaction Page
+![Transaction Page](demo-images/transfer.png)
+#### Transactions History
+![Transactions History](demo-images/transactions.png)
 
-The interface is designed to be clean and intuitive, facilitating easy navigation. It is responsive, providing a seamless experience across different devices.
+## License
+This project is open-source and available under the MIT License.
 
-Customer Data Management:
+---
 
-Utilization of a MongoDB database to effectively manage customer information. Basic details such as name, email, and current balance are stored securely.
-
-Dummy Data Creation:
-
-Functionality is included to generate and store dummy data for a maximum of 10 customers in the MongoDB database.
-
-Customers Table:
-
-A table is presented to display customer information, including their name, email, and current balance.
-
-Transfers Table:
-
-Integration of a Transfers table to log and exhibit all transactions. Key details recorded include the transaction date, sender, recipient, and transferred amount.
-
-Transaction Functionality:
-
-The system offers a user-friendly interface for initiating transactions between customers. Validation checks are in place to ensure that there are sufficient funds before processing transfers.
-
-Balance Update:
-
-Customer balances are updated in real-time following each successful transaction. These updated balances are reflected in the Customers table.
-
-Security Measures:
-
-Adherence to secure coding practices to mitigate common web vulnerabilities. Robust authentication and authorization mechanisms are implemented to maintain data integrity.
-
-Scalability:
-
-The design accounts for scalability, enabling the website to handle additional customers and transactions seamlessly in the future.
+Feel free to contribute or suggest improvements!
